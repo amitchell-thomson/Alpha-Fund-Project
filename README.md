@@ -5,7 +5,7 @@ Collaborative quantitative finance + data analysis project.
 This README describes:
 
 1.  **Setup** -- how to install everything and get the project running on your machine
-2.  **Git Workflow** -- how the team should use branches, commits, pulls, and pull requests
+2.  **Git Workflow** -- how the to use branches, commits, pulls, and pull requests
 3.  **Project Details & Structure** -- how the repository is organised and where different code belongs
 
 ------------------------------------------------------------------------
@@ -75,22 +75,19 @@ All dependencies must be installed from `requirements.txt` so everyone uses the 
 
 ### **Step 2 --- Select the interpreter**
 
-    Cmd/Ctrl + Shift + P → “Python: Select Interpreter”
+    Cmd + Shift + P → “Python: Select Interpreter”
 
 Choose the `.venv` environment.
 
-### **Step 3 --- Install extensions**
+### **Step 3 --- Install Python on VS Code**
 
 -   Python
--   Jupyter
--   GitLens (optional)
 
 ------------------------------------------------------------------------
 
 # **2. Git Workflow**
 
-This section explains **how the team uses GitHub**, including branches,
-commits, pulls, and pull requests.
+This section explains **how the to use GitHub**, including branches, commits, pulls, and pull requests.
 
 ------------------------------------------------------------------------
 
@@ -249,7 +246,7 @@ If a dataset is needed:
 
 -   All reusable code → `src/`
 -   All one-off experiments → `notebooks/`
--   No business logic inside notebooks\
+-   No big functions inside notebooks\
     (Notebooks should call functions from `src`)
 
 ------------------------------------------------------------------------
