@@ -166,11 +166,8 @@ $$
 
 However, during cascades, forward returns decompose into:
 
-$$
-r_{t,t+\delta t}
-= r^{\text{forced}}_{t,t+\delta t}
-+ r^{\text{fundamental}}_{t,t+\delta t}.
-$$
+$$ r_{t,t+\delta t} = r^{\text{forced}}_{t,t+\delta t} + r^{\text{fundamental}}_{t,t+\delta t} $$
+
 
 - $r^{\text{forced}}$ = predictable effects of temporary, one-sided forced flow  
 - $r^{\text{fundamental}}$ = price reaction to genuine information  
