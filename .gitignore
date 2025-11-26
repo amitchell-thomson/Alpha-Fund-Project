@@ -2,6 +2,7 @@
 data/raw_1hr/
 data/raw_5min/
 data/processed/
+notebooks/labelled_features.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
