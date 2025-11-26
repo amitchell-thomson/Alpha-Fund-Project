@@ -1,5 +1,6 @@
 # Data files (avoid commiting large files)
-data/raw/
+data/raw_1hr/
+data/raw_5min/
 data/processed/
 
 # Byte-compiled / optimized / DLL files
