@@ -24,8 +24,10 @@ def _compute_performance_stats(
 
     # cumulative equity using LOG returns (not simple returns)
     equity = np.exp(port_ret.cumsum())
-    total_periods = len(port_ret)
-    years = total_periods / bars_per_year
+    start_date = port_ret.index[0]
+    end_date = port_ret.index[-1]
+    time_diff = end_date - start_date
+    years = time_diff.days / 365.25
 
     final_equity = equity.iloc[-1]
     cagr = final_equity ** (1.0 / years) - 1.0 if years > 0 else 0.0

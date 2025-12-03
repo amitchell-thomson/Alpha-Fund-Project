@@ -70,7 +70,11 @@ def fit_cascade_model_and_returns(
                 try:
                     X_full = data[features].values
                     prob_cascade = models[ticker].predict_proba(X_full)[:, 1]
-                    expected_return = -prob_cascade * data["fwd_dd_log_H"].abs().values
+                    historical_cascade_data = data[data["label_cascade"] == 1]
+                    avg_cascade_magnitude = historical_cascade_data["fwd_dd_log_H"].abs().mean()
+
+                    # Use this average for all predictions
+                    expected_return = -prob_cascade * avg_cascade_magnitude
                 except Exception as e:
                     print(f"⚠️ Prediction failed for {ticker}: {e}")
 
