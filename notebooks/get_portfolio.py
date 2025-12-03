@@ -70,7 +70,8 @@ def fit_cascade_model_and_returns(
                 try:
                     X_full = data[features].values
                     prob_cascade = models[ticker].predict_proba(X_full)[:, 1]
-                    historical_cascade_data = data[data["label_cascade"] == 1]
+                    train_data = data.tail(lookback_train).copy()
+                    historical_cascade_data = train_data[train_data["label_cascade"] == 1]
                     avg_cascade_magnitude = historical_cascade_data["fwd_dd_log_H"].abs().mean()
 
                     # Use this average for all predictions
